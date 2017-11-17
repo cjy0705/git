@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#box{
+			position: absolute;
+		}
+	</style>
+</head>
+<body>
+<input type="button" value="摇起来" id="btn">
+<div id="box">
+	<img src="img/1-small.jpg" alt="">
+	<img src="img/2-small.jpg" alt="">
+</div>
+	<script>
+		// window.setInterval(function(){
+		// 	alert("点我干啥");
+		// },1000)
+		var btn=document.getElementById("btn");
+		var box=document.getElementById("box");
+		var timed="";
+		btn.onclick=function(){
+			timed=setInterval(function(){
+				box.style.left=parseInt(Math.random()*100+1)+"px";
+				box.style.top=parseInt(Math.random()*100+1)+"px";
+			},10);
+		};
+		// var timed="";
+	 //    btn.onclick=function () {
+	 //      timed=setInterval(function () {
+	 //        //设置div的位置是随机的---隔一段时间就改变这个随机位置
+	 //        box.style.left=parseInt(Math.random()*100+1)+"px";
+	 //        box.style.top=parseInt(Math.random()*100+1)+"px";
+	 //      },10);
+
+	 //    };
+
+
+	</script>
+</body>
+</html>

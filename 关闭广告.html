@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#box{
+			position: relative;
+			width: 200px;
+		}
+		span{
+			position: absolute;
+			right: 5px;
+			top: 5px;
+			color: #ccc;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<img src="img/1-small.jpg" alt="">
+		<span id="span">X</span>
+	</div>
+	<script type="text/javascript">
+		var span=document.getElementById("span");
+		var box=document.getElementById("box");
+		span.onclick=function(){
+			box.style.display="none";
+		}
+	</script>
+</body>
+</html>

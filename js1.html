@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<!-- 1.点击按钮弹出对话框
+2.点击按钮修改超链接的地址和热点文字
+3.点击(每个)图片弹出对话框
+4.点击图片设置自身宽和高
+5.点击按钮修改每个图片的title属性
+6.点击按钮显示哈哈(排他功能)
+7.点击按钮显示和隐藏div
+8.显示和隐藏二维码
+9.点击按钮修改所有p标签内容
+10.点击按钮修改所有文本框内容
+11.点击按钮切换图片
+12.点击超链接停止跳转页面
+13.点击小图显示大图
+14.美女相册
+15点击按钮选中性别和兴趣 -->
+
+	<!-- <button id="btn" onclick="f1">按钮</button>
+	<script type="text/javascript">
+		function f1(){
+			alert(1);
+		}
+		var btn =document.getElementById('btn');
+		btn.onclick=f1;
+	</script> -->
+
+	<!-- <input type="button" id="btn" value="按钮">
+	<script>
+		var btn=document.getElementById('btn');
+		btn.onclick=function(){
+			alert("点我干啥");
+		}
+	</script> -->
+
+	<!-- <input type="button" id="btn" value="点我">
+	<a href="www.baidu.com" id="a1">百度</a>
+	<script type="text/javascript">
+		var btn=document.getElementById('btn');
+		btn.onclick=function(){
+		var a=document.getElementsByTagName("a")[0];
+			a.innerText ='淘宝';
+			a.href='www.taobao.com';
+		}
+	</script> -->
+
+	<!-- <div id="box">
+		<img src="img/1-small.jpg" alt="">
+		<img src="img/2-small.jpg" alt="">
+		<img src="img/3-small.jpg" alt="">
+		<img src="img/5-small.jpg" alt="">
+	</div>
+	<script type="text/javascript">
+	var img=document.getElementsByTagName("img");
+		for (var i = 0; i < img.length; i++) {
+			img[i].onclick=function(){
+				alert("点我干啥");
+			}
+		}
+	</script> -->
+
+		<!-- <img src="img/1-small.jpg" alt="">
+		<img src="img/2-small.jpg" alt="">
+		<img src="img/3-small.jpg" alt="">
+		<img src="img/5-small.jpg" alt=""> 
+		<script type="text/javascript">
+			var img=document.getElementsByTagName("img")
+			console.log(img)
+			for(var i=0; i<img.length;i++){
+				img[i].ondblclick=function(){
+					this.style.width='400px';
+					this.style.height='400px';
+				}
+			}
+		</script> -->
+
+		<!-- <img src="img/1-small.jpg" alt="" title="1">
+		<img src="img/2-small.jpg" alt="" title="2">
+		<img src="img/3-small.jpg" alt="" title="3">
+		<img src="img/5-small.jpg" alt="" title="4">
+
+		<script type="text/javascript">
+			var img=document.getElementsByTagName("img")
+			for(var i=0;i<img.length;i++){
+				img[i].onclick=function(){
+					this.title="sha";
+				}
+			}
+		</script> -->
+
+		<!-- <input type="button" value="按钮">
+		<input type="button" value="按钮">
+		<input type="button" value="按钮">
+		<input type="button" value="按钮">
+		<input type="button" value="按钮">
+		<input type="button" value="按钮">
+		<script>
+			var inp =document.getElementsByTagName("input");
+			for(var i=0;i<inp.length;i++){
+				inp[i].onclick=function(){
+					for(var j=0;j<inp.length;j++){
+						inp[j].value="按钮";
+					}
+				this.value="不按钮";
+
+				}
+			}
+		</script> -->
+
+		<!-- <div id="box" style="width: 500px;height: 500px;background-color: red;"></div>
+		<input type="button" value="按钮" id="btn">
+		<script>
+			var btn=document.getElementById('btn');
+			var box=document.getElementById('box');
+			btn.onclick=function(){
+				box.style.display="none";
+			}
+
+		</script> -->
+
+		<!-- <p>哈哈哈</p>
+		<p>哈哈哈</p>
+		<p>哈哈哈</p>
+		<p>哈哈哈</p>
+		<p>哈哈哈</p>
+		<input type="button" value="按钮" id="btn">
+		<script type="text/javascript">
+			var btn=document.getElementById('btn');
+			var p=document.getElementsByTagName("p");
+			btn.onclick=function(){
+				for(var i=0;i<p.length;i++){
+					p[i].innerText="aaaa";
+				}
+			}
+		</script> -->
+		<!-- <input type="text" value="请输入内容">
+		<input type="text" value="请输入内容">
+		<input type="text" value="请输入内容">
+		<input type="text" value="请输入内容">
+		<input type="text" value="请输入内容">
+		<input type="text" value="请输入内容">
+		<input type="text" value="请输入内容">
+		<button id="btn">按钮</button>
+		<script type="text/javascript">
+			var inp=document.getElementsByTagName("input");
+			var btn=document.getElementById('btn');
+			btn.onclick=function(){
+				for(var i=0;i<inp.length;i++){
+					inp[i].value="就不输入怎么滴？";
+				}
+			}
+		</script> -->
+		<!-- <img src="img/1-small.jpg" alt="">
+		<input type="button" value="按钮" id="btn">
+		<script>
+			var btn=document.getElementById('btn');
+			var img=document.getElementsByTagName("img")[0];
+			btn.onclick=function(){
+				img.src="img/2-small.jpg";
+			}
+		</script> -->
+
+		<!-- <img src="img/1-small.jpg" alt="">
+		<img src="" alt="" id="big">
+		<script>
+			var img=document.getElementsByTagName("img")[0];
+			var big=document.getElementById('big');
+			img.onclick=function(){
+				big.src="img/1.jpg";
+			}
+		</script> -->
+
+		<!-- <a href="http://www.baidu.com">百度</a>
+		<script type="text/javascript">
+			var a =document.getElementsByTagName("a")[0];
+			a.onclick=function(){
+				alert("点我干啥");
+				return false;
+			}
+		</script> -->
+
+		<!-- <input type="button" value="点击按钮选中性别和兴趣" id="btn">
+		<input type="checkbox" id="zf">张飞
+		<input type="checkbox" >关羽
+		<input type="checkbox" id="mc">马超
+		<input type="checkbox" id="hz">黄忠
+		<input type="checkbox" >赵云
+		<input type="radio" id="nan">男
+		<input type="radio">女
+		<script type="text/javascript">
+			var btn=document.getElementById('btn');
+			var zf=document.getElementById('zf');
+			var mc=document.getElementById('mc');
+			var hz=document.getElementById('hz');
+			var nan=document.getElementById('nan');
+			btn.onclick=function(){
+				zf.checked=true;
+				mc.checked=true;
+				hz.checked=true;
+				nan.checked=true;
+			}
+		</script> -->
+		<!-- <input type="button" value="按钮" id="btn">
+		<select>
+			<option value="哈啊哈">哈啊哈</option>
+			<option value="和啊哈">和啊哈</option>
+			<option value="呵嗄呵" id="h">呵嗄呵</option>
+			<option value="呀喝啊">呀喝啊</option>
+			<option value="一哈啊">一哈啊</option>
+		</select>
+		<script type="text/javascript">
+		var btn=document.getElementById('btn');
+		var h=document.getElementById('h');
+			btn.onclick=function(){
+				h.selected=true;
+			}
+		</script> -->
+
+		<!-- <input type="button" id="btn" value="按钮">
+		<ul id="list">
+			<li>啊哈哈哈</li>
+			<li>啊哈哈哈</li>
+			<li>啊哈哈哈</li>
+			<li>啊哈哈哈</li>
+			<li>啊哈哈哈</li>
+			<li>啊哈哈哈</li>
+		</ul>
+		<script type="text/javascript">
+			var btn=document.getElementById('btn');
+			var list=document.getElementById('list').getElementsByTagName('li');
+			btn.onclick=function(){
+				for(var i=0;i<list.length;i++){
+					list[i].style.backgroundColor="red";
+				}
+			}
+		</script> -->
+		<!-- <input type="button" id="btn" value="按钮">
+		<input type="text" value="请输入内容" id="text">
+		<script>
+			var btn=document.getElementById('btn');
+			var text=document.getElementById('text');
+			btn.onclick=function(){
+				text.disabled=true;
+			}
+		</script> -->
+
+	<!-- 	<input type="text" value="请输入内容" id="inp">
+		<script type="text/javascript">
+			var inp =document.getElementById('inp');
+			inp.onfocus=function(){
+				if(this.value=="请输入内容"){
+					this.value="";
+					this.style.color = "black";
+
+				}
+			} 
+			inp.onblur=function(){
+				if(this.value==""){
+					this.value="请输入内容";
+					this.style.color = "gray";
+
+				}
+			}
+		</script> -->
+		<!-- <input type="password" id="pass">
+		<script type="text/javascript">
+			var pass=document.getElementById("pass");
+			pass.onblur =function(){
+				if(this.value.length>=6 && this.value.length<=10){
+					this.style.backgroundColor="red";
+				}else{
+					this.style.backgroundColor="";
+
+				}
+			}
+		</script> -->
+
+		<!-- 账号：<input type="text" id="inp"></br>
+		密码：<input type="password" id="pass">
+		<button id="btn">登陆</button>
+		<script>
+			var inp=document.getElementById("inp");
+			var pass=document.getElementById("pass");
+			var btn=document.getElementById("btn");
+			btn.onclick=function(){
+				if(inp.value=="admin"&&pass.value=="123456"){
+					alert("登陆成功");
+				}else{
+					alert("账号或密码错误");
+					inp.value="";
+					pass.value="";
+				}
+			}
+		</script> -->
+		<!-- <button id="btn">拼接字符串</button></br>
+		<input type="text"></br>
+		<input type="text"></br>
+		<input type="text"></br>
+		<input type="text"></br>
+		<input type="text">
+		<script>
+			var btn=document.getElementById("btn");
+			var input=document.getElementsByTagName("input");
+			btn.onclick=function(){
+				var str="";
+				for(var i=0;i<input.length;i++){
+						str+=input[i].value+"|";
+				}
+				console.log(str+input[input.length-1].value);
+			}
+		</script> -->
+
+	<!-- 	<ul id="list">
+			<li>哈哈哈</li>
+			<li>哈哈哈</li>
+			<li>哈哈哈</li>
+			<li>哈哈哈</li>
+			<li>哈哈哈</li>
+			<li>哈哈哈</li>
+		</ul>
+		<input type="button" id="btn" value="登陆">
+		<script>
+			var list=document.getElementById("list").getElementsByTagName('li');
+			var btn=document.getElementById('btn');
+			btn.onclick=function(){
+				for(var i=0;i<list.length;i++){
+					if(i%2==0){
+						list[i].style.backgroundColor="red";
+					}else{
+						list[i].style.backgroundColor="blue";
+					}
+				}
+			}
+		</script> -->
+		<!-- <input type="button" id="btn" value="按钮">
+		<script>
+			var btn=document.getElementById("btn");
+			btn.onclick=function(){
+				document.write("<p>哈哈</p>");
+			}
+		</script> -->
+	<!-- 	<input type="button" id="btn" value="按钮">
+		<div id="box"></div>
+		<script>
+			var btn=document.getElementById("btn");
+			var box=document.getElementById("box");
+			btn.onclick=function(){
+				box.innerHTML="<input type='text'>";
+
+			}
+		</script> -->
+		<script>
+			for(var i=0;i<10000;i++){
+				alert("点我干啥");
+			}
+		</script>
+</body>
+</html>
